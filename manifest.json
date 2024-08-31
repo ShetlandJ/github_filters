@@ -1,0 +1,17 @@
+{
+   "manifest_version": 3,
+   "name": "Github Filter Manager",
+   "version": "0.0.0",
+   "description": "Create GitHub filters on the fly",
+   "permissions": ["activeTab", "cookies", "storage"],
+   "host_permissions": ["https://github.com/*"],
+   "incognito": "split",
+   "content_scripts": [
+     {
+       "matches": ["https://github.com/*"],
+       "js": ["content.js"],
+       "run_at": "document_idle"
+     }
+   ],
+   "offline_enabled": false
+ } 
